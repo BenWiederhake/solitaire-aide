@@ -71,7 +71,7 @@ def print_analysis(analysis, card_names):
 
 def run():
     order = common.get_order()
-    print(order)
+    print("Using {}".format(order))
     deck = read_deck()
     if not deck:  # `None` (KeyboardInterrupt) and `[]` (nothing entered):
         exit(1)
