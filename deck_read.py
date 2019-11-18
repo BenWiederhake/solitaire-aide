@@ -24,7 +24,7 @@ def read_deck():
                 continue
     except KeyboardInterrupt:
         print('\nInterrupted.')
-        exit(1)
+        return None
     except EOFError:
         print()  # Line break
         pass  # This is fine.
@@ -73,6 +73,8 @@ def run():
     order = common.get_order()
     print(order)
     deck = read_deck()
+    if not deck:  # `None` (KeyboardInterrupt) and `[]` (nothing entered):
+        exit(1)
     print(deck)
     analysis = analyze_deck(deck)
     print_analysis(analysis, common.CardNames(order))
