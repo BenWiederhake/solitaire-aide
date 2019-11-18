@@ -38,7 +38,7 @@ Using SuitOrder ABCD ['A', 'B', 'C', 'D']
 The tools are listed in the order I wrote them.
 I suggest to use them is this order.
 
-### `deck_read.py`
+### Converting cards in your head (`deck_read.py`)
 
 This helps you with reading cards quickly and correctly.
 
@@ -56,7 +56,7 @@ Press Enter again to indicate the end of the deck.
 > 1
 > 7
 (etc.)
-> 38
+> 36
 > 17
 > 12
 >
@@ -67,6 +67,9 @@ J of Diamonds: Expected 1, got 0 instead.
 9 of Hearts: Expected 1, got 2 instead.
 J of Hearts: Expected 1, got 2 instead.
 K of Spades: Expected 1, got 2 instead.
+```
+
+```
 $ ./deck_read.py
 SuitOrder CDHS ['Clubs', 'Diamonds', 'Hearts', 'Spades']
 Enter 52-54 numbers between 1 and 54 as you read them from the deck.
@@ -81,14 +84,34 @@ Press Enter again to indicate the end of the deck.
 No issues.  Perfect!
 ```
 
+### Keystream Generation (`stream_gen.py`)
+
+FIXME
+
+### Deck keying (`deck_key.py`)
+
+FIXME
+
+### Modulo addition/subtraction (`stream_calc.py`)
+
+FIXME
+
+### Trying out example texts (`example_decode.py`, `example_encode.py`)
+
+FIXME
+
 ## TODOs
 
-* Everything
-* Sample texts that feel nice?
+* Implement `stream_gen.py`
+* Implement `deck_key.py`
+* Implement `stream_calc.py`
+* Sample texts that feel nice
+* Implement `example_{en,de}code.py`
 
 ## NOTDOs
 
 * Efficient encryption/decryption
+* Deck-input?
 
 ## Contribute
 

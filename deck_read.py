@@ -62,8 +62,9 @@ def print_analysis(analysis, card_names):
         if issue['which'] == 'total':
             print('The overall amount is off.  Expected 52-54 cards, got {} instead.'.format(issue['actual']))
             continue
-        print('{}: Expected {}, got {} instead.'.format(
+        print('{} ({}): Expected {}, got {} instead.'.format(
             card_names.name(issue['which'], issue.get('distinguish', True)),
+            issue['which'],
             ' or '.join(str(e) for e in issue['expected']),
             issue['actual'],
         ))
