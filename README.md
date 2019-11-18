@@ -9,6 +9,7 @@ This is a small set of tools I wrote to teach myself the
 
 - [Setup](#setup)
 - [Usage](#usage)
+- [How to learn](#how-to-learn)
 - [TODOs](#todos)
 - [NOTDOs](#notdos)
 - [Contribute](#contribute)
@@ -84,6 +85,10 @@ Press Enter again to indicate the end of the deck.
 No issues.  Perfect!
 ```
 
+### Modulo addition/subtraction (`stream_calc.py`)
+
+FIXME
+
 ### Keystream Generation (`stream_gen.py`)
 
 FIXME
@@ -92,11 +97,23 @@ FIXME
 
 FIXME
 
-### Modulo addition/subtraction (`stream_calc.py`)
+### Trying out example texts (`example_decode.py`, `example_encode.py`)
 
 FIXME
 
-### Trying out example texts (`example_decode.py`, `example_encode.py`)
+## How to learn
+
+Here's how I went about learning it.  Dunno if this helps you.
+
+Play with `deck_read.py`.  Personally, I first query for the "suit offset",
+and then add the card number to it (unless it's a king, then I just query
+the next suit's offset; sometimes I do the same for queens; Jokars are easy).
+So for 7 of Hearts I think "2 6 … 3 3", and of 9 of Spades I think "3 9 … 4 8".
+The important part is to actually think (and not just type) the result,
+because the result will eventually be needed for further operations (like count cut, etc.)
+Shuffle decks and repeat until you get it right at least two decks in a row.
+
+Next, play with `stream_calc.py`.
 
 FIXME
 
