@@ -37,8 +37,10 @@ class CardNames:
     def name_within(self, card_index):
         if card_index <= 10:
             return str(card_index)
+        if card_index == 1:
+            return 'Ace'
         #return 'UOK'[card_index - 11]  # Too much effort to distinguish this properly
-        return 'JQK'[card_index - 11]
+        return ['Jack', 'Queen', 'King'][card_index - 11]
 
     def name(self, total_index, distinguish_jokers=True):
         suit_i, card_i = divmod(total_index - 1, 13)
