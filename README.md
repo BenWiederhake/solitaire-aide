@@ -85,14 +85,19 @@ Press Enter again to indicate the end of the deck.
 No issues.  Perfect!
 ```
 
+### Letter-number-conversion (`stream_letters.py`)
+
+This tool helps you learn to convert between letters and numbers and back.
+You can try using `stream_calc.py` right away, and fall back to this if you
+find yourself counting for most of the time,
+because there's an easier way than just count.
+
 ### Modulo addition/subtraction (`stream_calc.py`)
 
 This tool helps you in memorizing which letter with what key and which mode
 (encrypting/decrypting) yields which letter.
 It essentially gives you a letter-key pair and asks you for the result.
 Repeat ad nauseum.
-
-Hmm, it doesn't work for me.
 
 ### Keystream Generation (`stream_gen.py`)
 
@@ -120,7 +125,11 @@ Shuffle decks and repeat until you get it right at least two decks in a row.
 
 Next, I played with `stream_calc.py`, but somehow I just don't really get the hang of it.
 
-So I went to play with `stream_letters.py`.
+So I went to play with `stream_letters.py`, which finally taught me the skill of
+converting numbers and letters:  The letter of `JOT` accidentally settle exactly
+on the positions of 10, 15, and 20.  I already know that `A=1,Z=0=26`, so that allows for quick conversion.
+
+Equipped with this knowledge, `stream_calc.py` begins to become easy, too.
 
 FIXME
 
