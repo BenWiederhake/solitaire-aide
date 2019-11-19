@@ -87,7 +87,12 @@ No issues.  Perfect!
 
 ### Modulo addition/subtraction (`stream_calc.py`)
 
-FIXME
+This tool helps you in memorizing which letter with what key and which mode
+(encrypting/decrypting) yields which letter.
+It essentially gives you a letter-key pair and asks you for the result.
+Repeat ad nauseum.
+
+Hmm, it doesn't work for me.
 
 ### Keystream Generation (`stream_gen.py`)
 
@@ -113,7 +118,9 @@ The important part is to actually think (and not just type) the result,
 because the result will eventually be needed for further operations (like count cut, etc.)
 Shuffle decks and repeat until you get it right at least two decks in a row.
 
-Next, play with `stream_calc.py`.
+Next, I played with `stream_calc.py`, but somehow I just don't really get the hang of it.
+
+So I went to play with `stream_letters.py`.
 
 FIXME
 
