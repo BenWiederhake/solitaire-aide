@@ -20,7 +20,9 @@ Nothing is really needed.
 
 By default, the algorithm determines the order as "Club-Diamonds-Hearts-Spade",
 but you can set it to whatever.  Just set the environment variable `SOLITAIRE_ORDER`
-to the initials of your desired order. For example:
+to the initials of your desired order. Support for the
+[French and German](https://en.wikipedia.org/wiki/Playing_card#Modern_deck_formats)
+decks is built-in:
 
 ```
 $ ./deck_read.py
