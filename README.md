@@ -1,3 +1,5 @@
+# ABANDONED
+
 # solitaire-aide
 
 > Helps you learn the "solitaire" encryption.
