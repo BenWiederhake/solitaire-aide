@@ -6,7 +6,7 @@ JOKER_B_CARD = 54;
 
 
 class Deck:
-    def __init__(self, j_move_top='skip'):
+    def __init__(self, j_move_top):
         assert j_move_top in ['skip', 'slot', 'swap']
         self.cards = list(range(1, 54 + 1))
         self.j_move_top = j_move_top
@@ -63,7 +63,7 @@ class Deck:
 
 
 def run():
-    deck = Deck(j_move_top='swap')
+    deck = Deck(j_move_top='slot')
     for i in range(99999):
         #print('State: {}'.format(deck))
         deck.advance()
