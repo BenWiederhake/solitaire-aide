@@ -1,2 +1,6 @@
 __pycache__/
 build/
+sheet.aux
+sheet.log
+sheet.out
+sheet.mw
