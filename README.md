@@ -1,5 +1,3 @@
-# ABANDONED
-
 # solitaire-aide
 
 > Helps you learn the "solitaire" encryption.
@@ -103,9 +101,10 @@ This tool helps you in memorizing which letter with what key and which mode
 It essentially gives you a letter-key pair and asks you for the result.
 Repeat ad nauseum.
 
-### Keystream Generation (`stream_gen.py`)
+### Keystream Generation (`deck_operate.py`)
 
-FIXME
+This little helper spews the keystream in a way that is reasonably-easy to analyze.
+It is not really meant to be used, except as an `import` or to generate `sheet.tex` and `sheet.pdf`.
 
 ### Deck keying (`deck_key.py`)
 
@@ -127,21 +126,20 @@ The important part is to actually think (and not just type) the result,
 because the result will eventually be needed for further operations (like count cut, etc.)
 Shuffle decks and repeat until you get it right at least two decks in a row.
 
-Next, I played with `stream_calc.py`, but somehow I just don't really get the hang of it.
+`stream_letters.py` taught me the skill of
+converting numbers and letters: By coincidence, the German name of the letter `j` is `JOT`,
+and the letters `JOT` just happen to be coincidentally the 10th, 15th, and 20th letter of the alphabet.
+I already know the first few and last few letters by heart, so that allows for rapid conversion.
 
-So I went to play with `stream_letters.py`, which finally taught me the skill of
-converting numbers and letters:  The letter of `JOT` accidentally settle exactly
-on the positions of 10, 15, and 20.  I already know that `A=1,Z=0=26`, so that allows for quick conversion.
-
-Equipped with this knowledge, `stream_calc.py` begins to become easy, too.
+Next, I played with `stream_calc.py`, which puts this skill to the extremes: encode/decode random letters and offsets.
+To make it a bit more realistic, and potentially train my brain to be faster around the most frequent letters,
+I did not pick the *uniform* random letter distribution, but rather the actual frequencies of each letter in English text.
 
 FIXME
 
 ## TODOs
 
-* Implement `stream_gen.py`
 * Implement `deck_key.py`
-* Implement `stream_calc.py`
 * Sample texts that feel nice
 * Implement `example_{en,de}code.py`
 
