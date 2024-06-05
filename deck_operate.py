@@ -37,19 +37,23 @@ class Deck:
             a_pos, b_pos = b_pos, a_pos
         self.cards = self.cards[b_pos + 1:] + self.cards[a_pos:b_pos + 1] + self.cards[:a_pos]
 
-    def count_cut(self):
+    def count_cut(self, given_count):
         # Always reversible.
-        count = self.cards[-1]
+        if given_count is not None:
+            count = given_count
+        else:
+            count = self.cards[-1]
+        assert 1 <= count <= JOKER_B_CARD
         if count >= JOKER_A_CARD:
             # Nothing happens anyway.
             return
         self.cards = self.cards[count:-1] + self.cards[0:count] + [self.cards[-1]]
 
-    def advance(self):
+    def advance(self, given_count=None):
         self.move_jokers()
         #print('After moving:', self.cards)
         self.triple_cut()
-        self.count_cut()
+        self.count_cut(given_count)
 
     def peek(self):
         offset = min(53, self.cards[0])
